@@ -1,84 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rides Mate - Terms and Conditions</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background-color: #f9f9f9;
-    }
-    h1 {
-      color: #333;
-    }
-    .tab {
-      overflow: hidden;
-      background-color: #333;
-    }
-    .tab a {
-      float: left;
-      color: white;
-      padding: 14px 16px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 16px;
-      transition: 0.3s;
-    }
-    .tab a:hover {
-      background-color: #ddd;
-      color: black;
-    }
-    .content {
-      padding: 20px;
-      background: white;
-      margin-top: 10px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-    h2 {
-      color: #444;
-    }
-    p {
-      color: #555;
-      line-height: 1.6;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rides Mate - Legal Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #003366;
+        }
+        h1 {
+            font-size: 2em;
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style: disc;
+            margin: 0 0 15px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .contact {
+            font-style: italic;
+        }
+        .tab {
+            display: flex;
+            justify-content: center;
+            background-color: #003366;
+            margin-bottom: 20px;
+        }
+        .tab a {
+            padding: 14px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        .tab a:hover {
+            background-color: #005f99;
+        }
+        .tab a.active {
+            background-color: #005f99;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+    </style>
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+            document.querySelectorAll('.tab a').forEach(link => {
+                link.classList.remove('active');
+            });
+            document.getElementById('link-' + id).classList.add('active');
+        }
+    </script>
 </head>
 <body>
+    <div class="tab">
+        <a href="#" id="link-terms" class="active" onclick="showSection('terms')">Terms & Conditions</a>
+        <a href="#" id="link-privacy" onclick="showSection('privacy')">Privacy Policy</a>
+    </div>
 
-<div class="tab">
-  <a href="tnc.html">Terms & Conditions</a>
-  <a href="privacy.html">Privacy Policy</a>
-</div>
+    <div class="container">
+        <!-- Terms & Conditions Section -->
+        <div id="terms" class="section active">
+            <h1>Terms & Conditions</h1>
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing or using Rides Mate, you agree to comply with and be bound by these Terms and Conditions. If you disagree with any part of these terms, you may not use our services.</p>
 
-<div class="content">
-  <h1>Terms and Conditions</h1>
-  <p><strong>Effective Date:</strong> [Insert Today’s Date]</p>
+            <h2>2. Use of Services</h2>
+            <p>Rides Mate provides a platform for vehicle rentals, and users are responsible for ensuring that all rental transactions comply with local regulations.</p>
 
-  <h2>1. Overview</h2>
-  <p>Rides Mate provides a platform for users to browse, book, and rent vehicles by category. By using our app, you agree to these terms and our privacy policy.</p>
+            <h2>3. User Responsibilities</h2>
+            <p>Users are expected to provide accurate information during registration and maintain the confidentiality of their account information.</p>
 
-  <h2>2. User Responsibilities</h2>
-  <p>Users must ensure the information provided during registration is accurate and adhere to rental terms, including returning vehicles on time and in the same condition as at the time of rental.</p>
+            <h2>4. Payment and Fees</h2>
+            <p>Payments for rentals are handled through third-party payment providers. You are responsible for any fees or taxes applicable to your transactions.</p>
 
-  <h2>3. Booking and Payments</h2>
-  <p>Bookings are subject to vehicle availability, and payment terms are finalized at the time of booking. Late returns may incur additional charges.</p>
+            <h2>5. Liability Limitation</h2>
+            <p>Rides Mate is not liable for any indirect or consequential damages resulting from the use of our services.</p>
 
-  <h2>4. Cancellations and Refunds</h2>
-  <p>Cancellation policies vary depending on booking time and rental period. Users may review individual booking details for specific cancellation terms.</p>
+            <h2>6. Changes to Terms</h2>
+            <p>We reserve the right to update these Terms and Conditions as necessary. Changes will be effective upon posting.</p>
 
-  <h2>5. Liability</h2>
-  <p>Rides Mate is not liable for accidents, damages, or losses occurring during vehicle rental. Users are responsible for ensuring safe usage of rented vehicles.</p>
+            <h2>7. Contact Us</h2>
+            <p>If you have questions about these Terms and Conditions, please contact us at:</p>
+            <p class="contact">Email: business@ridesmate.com</p>
+        </div>
 
-  <h2>6. Amendments</h2>
-  <p>Rides Mate reserves the right to amend these terms at any time. Continued app usage after updates constitutes acceptance of revised terms.</p>
+        <!-- Privacy Policy Section -->
+        <div id="privacy" class="section">
+            <h1>Privacy Policy</h1>
+            <p><strong>Effective Date:</strong> October 17, 2024</p>
 
-  <h2>7. Contact</h2>
-  <p>For questions or concerns, users may contact Rides Mate via [contact information].</p>
-</div>
+            <h2>1. Introduction</h2>
+            <p>Rides Mate (“we,” “our,” or “us”) is committed to respecting and protecting your privacy. This Privacy Policy explains how we collect, use, and share information about users of our mobile application, <strong>Rides Mate</strong>, to provide rental services for vehicles by categories. By using Rides Mate, you consent to the data practices described in this policy.</p>
 
+            <h2>2. Information We Collect</h2>
+            <p>We collect the following information to enable a seamless rental experience:</p>
+            <ul>
+                <li><strong>First Name and Last Name</strong>: For identification and communication purposes.</li>
+                <li><strong>Phone Number</strong>: To facilitate secure communication and booking confirmations.</li>
+            </ul>
+
+            <h2>3. How We Use Your Information</h2>
+            <p>The information we collect is used to:</p>
+            <ul>
+                <li>Enable vehicle booking and rental services within the app.</li>
+                <li>Send notifications or updates regarding your rentals.</li>
+                <li>Improve user experience and app functionality.</li>
+            </ul>
+
+            <h2>4. Data Sharing and Disclosure</h2>
+            <p>We do not sell, lease, or share your personal information with third parties unless required by law or necessary for fulfilling rental transactions.</p>
+
+            <h2>5. Data Security</h2>
+            <p>We employ appropriate security measures to safeguard the information collected. However, no system can be fully secure.</p>
+
+            <h2>6. Data Retention</h2>
+            <p>Your data will be retained for as long as necessary to provide services and comply with legal obligations.</p>
+
+            <h2>7. Your Rights</h2>
+            <p>You have the right to:</p>
+            <ul>
+                <li>Access the personal data we hold about you.</li>
+                <li>Request corrections to any inaccurate or outdated data.</li>
+                <li>Request deletion of data, subject to certain exceptions.</li>
+            </ul>
+
+            <h2>8. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time.</p>
+
+            <h2>9. Contact Us</h2>
+            <p>If you have questions about this Privacy Policy, please contact us at:</p>
+            <p class="contact">Email: business@ridesmate.com</p>
+        </div>
+    </div>
 </body>
 </html>
